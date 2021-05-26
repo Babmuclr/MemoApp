@@ -6,6 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hello World!</Text>
+      {/* eslint-disable-next-line */}
       <StatusBar style="auto" />
     </View>
   );
