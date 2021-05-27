@@ -1,17 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
+// StatusBarはアプリのヘッダーを変更する
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import Hello from './src/components/Hello';
+import AppBar from './src/components/AppBar';
+import MemoList from './src/components/MemoList';
+import CircleButton from './src/components/CircleButton';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Hello bang style={{ fontSize: 16 }}>World</Hello>
-      <Hello bang>World</Hello>
-      <Text>Hello World!</Text>
-      {/* eslint-disable-next-line */}
-      <StatusBar style="auto" />
+      <AppBar />
+      <MemoList />
+      <CircleButton>+</CircleButton>
     </View>
   );
 }
@@ -19,8 +20,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#F0F4F8',
   },
 });
