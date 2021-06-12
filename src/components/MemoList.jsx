@@ -25,6 +25,36 @@ export default function MemoList() {
           <Icon name="delete" size={24} color="#B0B0B0" />
         </TouchableOpacity>
       </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => { navigation.navigate('MemoDetail'); }}
+        style={styles.memoListItem}
+      >
+        <View>
+          <Text style={styles.memoListItemTitle}>Shopping List</Text>
+          <Text style={styles.memoListItemItemDate}>2021/05/27</Text>
+        </View>
+        <TouchableOpacity
+          onPress={() => { Alert.alert('Are you sure?'); }}
+          style={styles.memoDelete}
+        >
+          <Icon name="delete" size={24} color="#B0B0B0" />
+        </TouchableOpacity>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => { navigation.navigate('MemoDetail'); }}
+        style={styles.memoListItem}
+      >
+        <View>
+          <Text style={styles.memoListItemTitle}>Shopping List</Text>
+          <Text style={styles.memoListItemItemDate}>2021/05/27</Text>
+        </View>
+        <TouchableOpacity
+          onPress={() => { Alert.alert('Are you sure?'); }}
+          style={styles.memoDelete}
+        >
+          <Icon name="delete" size={24} color="#B0B0B0" />
+        </TouchableOpacity>
+      </TouchableOpacity>
     </View>
   );
 }
