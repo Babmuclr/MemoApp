@@ -24,7 +24,6 @@ export default function MemoListScreen(props) {
       unsubscribe = ref.onSnapshot((snapshot) => {
         const userMemos = [];
         snapshot.forEach((doc) => {
-          console.log(doc.id, doc.data);
           const data = doc.data();
           userMemos.push({
             id: doc.id,
@@ -33,8 +32,7 @@ export default function MemoListScreen(props) {
           });
         });
         setMemos(userMemos);
-      }, (error) => {
-        console.log(error);
+      }, () => {
         Alert.alert('Data Corrupted');
       });
     }

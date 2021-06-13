@@ -25,7 +25,7 @@ export default function LogOutButton() {
       style={styles.container}
       onPress={handlePress}
     >
-      <Text style={styles.label}>Log Out</Text>
+      <Text style={styles.label}>ログアウト</Text>
     </TouchableOpacity>
   );
 }
