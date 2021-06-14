@@ -1,7 +1,5 @@
-// import { StatusBar } from 'expo-status-bar';
-// StatusBarはアプリのヘッダーを変更する
-// Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 import React from 'react';
+import { LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import firebase from 'firebase';
@@ -18,6 +16,7 @@ import { firebaseConfig } from './env';
 require('firebase/firestore');
 
 const Stack = createStackNavigator();
+LogBox.ignoreLogs(['Setting a timer']);
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
@@ -27,7 +26,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="SignUp"
+        initialRouteName="LogIn"
         screenOptions={{
           headerStyle: { backgroundColor: '#467FD3' },
           headerTitleStyle: { color: '#ffffff' },
