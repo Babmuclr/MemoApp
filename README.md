@@ -1,3 +1,7 @@
 # MemoApp
 Memoアプリを作成する
-https://www.udemy.com/share/10228SBkYcclhWQn4=/
+
+Udemyのこのコースの完成品
+
+https://www.udemy.com/course/react-native-ios-android/
+
